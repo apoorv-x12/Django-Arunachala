@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def welcome(request):
     return HttpResponse('<h1 style="color:blue;">welcome bruh!</h1>')
+
+def topics(request):
+    return render(request,'topics.html')

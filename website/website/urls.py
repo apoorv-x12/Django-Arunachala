@@ -20,4 +20,5 @@ import basics.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome/',basics.views.welcome),
+    path('topics/',basics.views.topics),
 ]

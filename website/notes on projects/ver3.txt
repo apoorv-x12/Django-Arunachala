@@ -1,0 +1,3 @@
+---- added http://localhost:8000/topics/ to project by changing views.py in basics and urls.py in website
+
+---- also changed settings.py by adding 'basics' to INSTALLED_APPS
