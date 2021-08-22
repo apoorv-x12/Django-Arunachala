@@ -1,0 +1,1 @@
+setup of project with 1 application 'basics' done.
