@@ -1,0 +1,3 @@
+---- last time used Django template library notation of {{nowVar}} to access data in html file this time
+----we added urls.py in basics itself to accomodate topics and welcome in basics itself
+---- then added this urls.py from basics to urls.py in website using include() etc
