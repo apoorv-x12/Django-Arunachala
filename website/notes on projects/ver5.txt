@@ -1,0 +1,5 @@
+---- added wish in views.py in which  used name=request.GET['name'] ie the query string concept:
+http://localhost:8000/basics/wish/?name=ap
+
+----NOTE NOtation:
+return HttpResponse(f'<h1> hi, {name} </h1>')
