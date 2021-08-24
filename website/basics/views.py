@@ -9,3 +9,11 @@ def welcome(request):
 def topics(request):
     c=str(datetime.datetime.now())
     return render(request,'topics.html',{'nowVar':c})
+
+def wish(request):
+    if 'name' in request.GET:
+        name=request.GET['name']
+    else:
+        name="Xtreme"
+    
+    return HttpResponse(f'<h1> hi, {name} </h1>')
