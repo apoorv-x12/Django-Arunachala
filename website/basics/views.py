@@ -10,6 +10,11 @@ def topics(request):
     c=str(datetime.datetime.now())
     return render(request,'topics.html',{'nowVar':c})
 
+def send_topic(request):
+    topics=['orm','DB','view','url','rest']
+    trainer='apoorv shrivastava'
+    return render(request,'list_topics.html',{'topics':topics, 'trainer':trainer})
+
 def wish(request):
     if 'name' in request.GET:
         name=request.GET['name']
