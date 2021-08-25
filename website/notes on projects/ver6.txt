@@ -1,0 +1,4 @@
+---- added  a new view in basics send_topic and used django templates {{}} and tags
+ {%%} (-used if and for tags)
+
+----used and created a new template list_topics.html
