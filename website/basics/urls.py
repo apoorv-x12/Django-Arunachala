@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, interest_view
 
 urlpatterns = [
     path('welcome/',views.welcome),
@@ -7,4 +7,5 @@ urlpatterns = [
     path('lp/',views.send_topic),
     #note first argument's name is up to you it need not be send_topic as in above line  !!!!!
     path('wish/',views.wish),
+    path('interest/',interest_view.interest),
 ]
