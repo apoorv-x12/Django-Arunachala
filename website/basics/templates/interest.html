@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interest</title>
+</head>
+<body>
+
+    <h2>Interest Calculation</h2>
+    <form>
+        Deposit Amount <br>
+        <input type="number" name='amount' value="{{amount}}" required>
+        <!--note use required in input field to avoid errors!!!
+            note vlaue is used to display inside input fields for user-->
+        <p></p>
+        Rate <br>
+        <input type="number" step='any' min="5" name='rate' value="{{rate}}" required>
+        <!-- note that number means int and step='.5' means 0,.5,1,1.5 etc hence any is for float input from user-->
+        <p></p>
+        <input type="submit" value="calculate interest">
+    </form>
+
+    {% if interest %}
+    <h3>Interest: {{interest}}</h3>
+    {% endif %}
+
+</body>
+
+</html>

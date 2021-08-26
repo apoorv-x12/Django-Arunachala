@@ -1,0 +1,3 @@
+---- added a new module for views interest_view.py in basics had to add this in urls.py in basics first
+
+----also created interest.html for using html form to display interest by taking amount and rate from user
