@@ -1,0 +1,4 @@
+---- used POST method instead of GET by creating a new template interest_post and created new view interest_post
+
+---- also add method='POST' as attribute in form tag
+and inside it add csrf token : {% csrf_token %}
