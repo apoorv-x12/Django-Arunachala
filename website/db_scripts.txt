@@ -1,0 +1,14 @@
+--- all commamds executed in sqlite are mentioned here from top to bottom in that order only
+
+create table authors(
+auid integer primary key autoincrement,
+fullname varchar(30),
+email varchar(50) unique,
+mobile varchar(20)
+)
+
+insert into authors(fullname, email,mobile)
+ values ('Scott Guthrie','guthrie@microsoft.com','3399434994')
+
+insert into authors(fullname, email,mobile)
+ values ('Malcolm Gladwell', 'gladwell@gmail.com','9494888333')

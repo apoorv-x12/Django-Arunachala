@@ -1,0 +1,7 @@
+---- added a new view authors_view.py and connected it to sqlite3 database db.
+
+---- also added a new folder in templates db and inside it template for authors_list view in authors_view.py
+
+---- also note: db/authors_list.html -> this was name used in render function with .html etc aka wrote full name
+
+---- also created db_scripts.txt to keep sql commands executed in sqlite3 db 
