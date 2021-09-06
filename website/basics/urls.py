@@ -12,4 +12,5 @@ urlpatterns = [
     path('interest_p/',interest_view.interest_post),
     #authors_view.py urls:
     path('authors/',authors_view.authors_list),
+    path('add_author/',authors_view.add_author),
 ]
