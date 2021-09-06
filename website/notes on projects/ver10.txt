@@ -1,0 +1,12 @@
+---- added a new functionality/vew/function to add_author in authors_view.py and created a new db template 
+add_author combining HTML form to take input and con and cur aka database functions in views to 
+add new data to database via API 
+
+---- also ofcourse added this new view to urls.py in basics as well as url add_author
+
+---- also added these type of link to each authors(attached to template authors_list in db folder
+made earlier which displays authors in html table)
+and add_author(made in this ver-10):
+
+<a href="/basics/authors/">GO to LIST of AUTHORS</a>
+<a href="/basics/add_author/">GO to ADD AUTHORS</a>

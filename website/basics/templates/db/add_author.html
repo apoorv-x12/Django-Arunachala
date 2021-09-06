@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>add author</title>
+</head>
+<body>
+
+    <h2>Give Details of Author:</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        FULLNAME <br>
+        <input type="text" name='fullname' value="{{fullname}}" required>
+        <!--note use required in input field to avoid errors!!!
+            note vlaue is used to display inside input fields for user-->
+        <p></p>
+        EMAIL <br>
+        <input type="email" name='email' value="{{email}}" required>
+        <p></p>
+        MOBILE <br>
+        <input type="number" name='mobile' value="{{mobile}}" required>
+        <p></p>
+        <input type="submit" value="add author">
+        <h3>{{message}}</h3>
+    </form>
+    <br>
+    <a href="/basics/authors/">GO to LIST of AUTHORS</a>
+
+</body>
+
+</html>
