@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>interest django forms</title>
+</head>
+<body>
+    <h2>Interest :</h2>
+     
+    <form method="post">
+        <!--if we add novalidate to  <form method="post" novalidate> above then django will validate but
+            don't use django for it aka don't use novalidate and let html validate it -->
+        {% csrf_token %}
+        <table>
+            {{form}}
+        </table>
+        <p></p>
+        <input type="submit" value="calculate">
+    </form>
+
+    {% if interest %}
+        <h3>Interest: {{interest}}</h3>    
+    {% endif %}
+</body>
+</html>

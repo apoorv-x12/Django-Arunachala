@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import InterestForm
 
 def interest(request):
     if 'amount' in request.GET:
@@ -19,3 +20,17 @@ def interest_post(request):
         return render(request,'interest_post.html',{'amount':amount, 'rate':rate, 'interest':interest})
     else: #GET
         return render(request,'interest_post.html')
+
+def interest_form(request):
+    if request.method=="POST":
+        form=InterestForm(request.POST) # bind post data to form object
+        if form.is_valid():
+            amount=float(form.cleaned_data['amount']) # form.cleaned_data is a dictionary aka {key:value}
+            rate=float(form.cleaned_data['rate'])
+            interest=(amount*rate)/100
+            return render(request,'interest_form.html',{'interest':interest,'form':form})
+        else :
+            return render(request,'interest_form.html',{'form':form})
+    else : # get method 
+        form=InterestForm() # empty form
+        return render(request,'interest_form.html',{'form':form})
