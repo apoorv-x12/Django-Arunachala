@@ -1,0 +1,70 @@
+---made a new forms.py aka Django form as class using following code:
+
+from django import forms
+
+class InterestForm(forms.Form):
+        amount=forms.FloatField(label='Amount')
+        rate=forms.FloatField(label="Interest rate" ,min_value=5 ,max_value=50)
+
+---after creating forms.py i went to git bash and opened python manage.py shell and did the following :
+        
+ 
+                (env)
+        apoorv@MSI MINGW64 /d/GITHUB/Django-Arunachala/website (ver-11)
+        $ python manage.py shell
+        Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+        Type "help", "copyright", "credits" or "license" for more information.
+        (InteractiveConsole)
+        >>> from basics.forms import InterestForm
+        >>> f=InterestForm()
+        >>> print(f)
+        <tr><th><label for="id_amount">Amount:</label></th><td><input type="number" name="amount" step="any" required id="id_amount"></td></tr>
+        <tr><th><label for="id_rate">Interest rate:</label></th><td><input type="number" name="rate" min="5" max="50" step="any" required id="id_rate"></td></tr>
+        >>> print(f.amount)
+        Traceback (most recent call last):
+        File "<console>", line 1, in <module>
+        AttributeError: 'InterestForm' object has no attribute 'amount'
+        >>> print(f['amount'])
+        <input type="number" name="amount" step="any" required id="id_amount">
+        >>> print(f["rate"])
+        <input type="number" name="rate" min="5" max="50" step="any" required id="id_rate">
+        >>> f.is_bound
+        False
+        >>> f.errors
+        {}
+        >>> f.is_valid()
+        False
+        >>> f=InterestForm({'amount':100.3})
+        >>> f.is_bound
+        True
+        >>> f.is_valid()
+        False
+        >>> f.errors
+        {'rate': ['This field is required.']}
+        >>> f.errors['rate']
+        ['This field is required.']
+        >>> f['rate']
+        <django.forms.boundfield.BoundField object at 0x0000021FF4F45F70>
+        >>> f['rate'].errors
+        ['This field is required.']
+        >>> f=InterestForm({'amount':10.4,'rate':56.7})
+        >>> f.is_bound
+        True
+        >>> f.is_valid()
+        False
+        >>> f.errors
+        {'rate': ['Ensure this value is less than or equal to 50.']}
+        >>> f['rate']=46
+        Traceback (most recent call last):
+        File "<console>", line 1, in <module>
+        TypeError: 'InterestForm' object does not support item assignment
+        >>> f=InterestForm({'amount':39.6,'rate':45})
+        >>> f.is_valid()
+        True
+        >>> f.errors
+        {}
+        >>> f.cleaned_data
+        {'amount': 39.6, 'rate': 45.0}
+        >>> f.cleaned_data['rate']
+        45.0
+        >>> exit()
