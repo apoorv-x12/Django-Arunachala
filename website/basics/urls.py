@@ -15,4 +15,5 @@ urlpatterns = [
     path('add_author/',authors_view.add_author),
     # for below used django forms by importing forms or classes from forms.py like InterestForm in interest_view
     path('interest_form/',interest_view.interest_form),
+    path('interest_form_custom/',interest_view.interest_form_custom),
 ]
