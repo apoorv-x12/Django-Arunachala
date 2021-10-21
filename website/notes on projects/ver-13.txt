@@ -1,0 +1,5 @@
+--- used InterestForm class by importing it in interest_view inside the newly created
+view inside it interest_form_custom and
+--- added interest_form_custom.html in templates
+--- finally added interest_view.interest_form_custom in urls.py
+--- added ver-13.txt
